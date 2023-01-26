@@ -4,6 +4,8 @@
 
 layout: home
 ---
+<div>
+<h2>SoC status</h2>
 <table>
 <thead>
 <tr>
@@ -39,3 +41,34 @@ layout: home
 {% endfor %}
 </tbody>
 </table>
+</div>
+
+<div>
+<h2>PMIC Status</h2>
+<table>
+<thead>
+<tr>
+<th>PMIC</th>
+<th>GPIO</th>
+<th>MPP</th>
+<th>RTC</th>
+<th>ADC</th>
+<th>ADC-TM</th>
+<th>temp-alarm</th>
+</tr>
+</thead>
+<tbody>
+{% for d in site.pmic %}
+<tr>
+<td><a href="{{d.url | absolute_url}}">{{d.name}}</a></td>
+{%include_cached status.liquid status=d.pmic-gpio %}
+{%include_cached status.liquid status=d.pmic-mpp %}
+{%include_cached status.liquid status=d.pmic-rtc %}
+{%include_cached status.liquid status=d.pmic-adc %}
+{%include_cached status.liquid status=d.pmic-adc-tm %}
+{%include_cached status.liquid status=d.pmic-temp-alarm %}
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
