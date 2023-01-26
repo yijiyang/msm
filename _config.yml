@@ -36,6 +36,8 @@ plugins:
 collections:
   soc:
     output: true
+  pmic:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
