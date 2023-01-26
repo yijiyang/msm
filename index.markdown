@@ -25,7 +25,7 @@ layout: home
 <tbody>
 {% for d in site.soc %}
 <tr>
-<td>{{d.name}}</td>
+<td><a href="{{d.url}}">{{d.name}}</a></td>
 {%include_cached status.liquid status=d.status-uart %}
 {%include_cached status.liquid status=d.status-gcc  %}
 {%include_cached status.liquid status=d.status-icc  %}
