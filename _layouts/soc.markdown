@@ -7,7 +7,24 @@ layout: default
 {{ content }}
 </div>
 
+<div>
+<h2>Supported PMICs</h2>
+{% assign pmics = page.pmic | split: ", "  %}
+{% for pmic in pmics %}
+{% if forloop.first %}
+<ul>
+{% endif %}
+<li><a href="{{site.url}}{{site.baseurl}}/pmic/{{pmic}}">{{pmic}}</a></li>
+{% if forloop.last %}
+</ul>
+{% endif %}
+{% else %}
+<p>No PMICs defined in database</p>
+{% endfor %}
+</div>
+
 <div class="soc-status">
+<h2>Platform status</h2>
 <table>
 <tr><td colspan="2">UART</td>{%include_cached status.liquid status=page.status-uart %}</tr>
 <tr><td colspan="2">GCC</td>{%include_cached status.liquid status=page.status-gcc  %}</tr>
