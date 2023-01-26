@@ -34,7 +34,8 @@ plugins:
   - jekyll-include-cache
 
 collections:
-  - soc
+  soc:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
