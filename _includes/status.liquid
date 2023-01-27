@@ -9,5 +9,9 @@
   {%- when nil -%}
     status-unknown
   {%- else -%}
-    status-Y
+    {%- if include.status contains "no-dts" -%}
+      status-no-dts
+    {%- else -%}
+      status-Y
+    {%- endif -%}
 {%- endcase -%}">{{include.status}}</td>
