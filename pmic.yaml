@@ -1,0 +1,14 @@
+# Don't forget to execute ./regen.py after changing this file.
+
+gpio:
+  name: GPIO
+mpp:
+  name: MPP
+rtc:
+  name: RTC
+adc:
+  name: ADC
+adc-TM:
+  name: ADC-TM
+temp-alarm:
+  name: temp-alarm

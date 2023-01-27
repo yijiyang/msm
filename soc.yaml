@@ -1,0 +1,23 @@
+# Don't forget to execute ./regen.py after changing this file.
+
+uart:
+  name: UART
+gcc:
+  name: GCC
+icc:
+  name: Interconnect
+gpu:
+  name: GPU
+gps:
+  name: GPS
+display:
+  name: Display
+  items:
+    dpu:
+      name: MDP/DPU
+    dsi:
+      name: DSI
+    hdmi:
+      name: HDMI
+    dp:
+      name: DP
