@@ -33,6 +33,11 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
+feed:
+  collections:
+    - soc
+    - pmic
+
 collections:
   soc:
     output: true
