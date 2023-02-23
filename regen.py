@@ -47,6 +47,7 @@ def write_layout(out, data, prefix, wrap=True):
             out.write('<tr>')
         out.write('<th>%s</th>' % v['name'])
         write_status_tag(out, '%s-%s' % (prefix, k))
+        out.write('<td>{{ %s-%s-comment }}</td>\n' % (prefix, k))
         out.write('</tr>\n')
 
 def write_layout_nested(out, data, prefix):
@@ -57,6 +58,7 @@ def write_layout_nested(out, data, prefix):
         else:
             out.write('<tr><th colspan="2">%s</th>' % (v['name']))
             write_status_tag(out, '%s-%s' % (prefix, k))
+            out.write('<td>{{ %s-%s-comment }}</td>\n' % (prefix, k))
             out.write('</tr>\n')
 
 def write_status(out, data, prefix):
