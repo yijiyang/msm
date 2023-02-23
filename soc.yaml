@@ -21,17 +21,15 @@ interconnects:
 uart:
   name: UART
   intop: True
+spmi:
+  name: SPMI
+  intop: True
 i2c:
   name: I2C
   intop: True
 spi:
   name: SPI
   intop: True
-  items:
-    spise:
-      name: SPI (Serial Engine)
-    qspi:
-      name: QSPI
 pcie:
   name: PCIe
   intop: True
@@ -50,20 +48,13 @@ storage:
     ufs:
       name: UFS
       intop: True
-    emmc:
+    ufsice:
+      name: UFS ICE
+    sdcc:
       name: SD/eMMC
       intop: True
-      items:
-        emmcice:
-          name: eMMC ICE
-        hs400:
-          name: HS400 enhanced strobe
-        cqe:
-          name: CQE
-        usd:
-          name: uSD
-        sdio:
-          name: SDIO
+    emmcice:
+      name: eMMC ICE
 cpu:
   name: CPU
   intop: True
@@ -80,7 +71,12 @@ cpu:
       name: L3 Cache Controller
     smp:
       name: SMP
-      intop: True
+    llcc:
+      name: LLCC Scaling
+    ddrfreq:
+      name: DDRfreq
+    bwmon:
+      name: bwmon(s)
 remoteproc:
   name: Remoteproc
   intop: True
@@ -95,22 +91,22 @@ remoteproc:
       name: MDSP
     fastrpc:
       name: FastRPC/compute
-bluetooth:
-  name: Bluetooth
+connectivity:
+  name: Connectivity
   intop: True
   items:
-    smd:
-      name: SMD
-    uart:
-      name: UART
-wlan:
-  name: WLAN
-  intop: True
-  items:
-    onoff:
-      name: On/Off
-    browsing:
-      name: Browsing
+    bluetooth:
+      name: Bluetooth
+      intop: True
+    wlan:
+      name: WLAN
+      intop: True
+    ipa:
+      name: IPA
+      intop: True
+    ethernet:
+      # either EMAC or GMAC, depending on the SoC
+      name: Ethernet
 gnss:
   name: GNSS (GPS)
   intop: True
@@ -144,6 +140,20 @@ audio:
     adspaudio:
       name: ADSP (AudioReach)
       intop: True
+usb:
+  name: USB
+  intop: true
+  items:
+    hostmode:
+      name: Host Mode
+    periphmode:
+      name: Peripheral Mode
+    usbotg:
+      name: USB OTG
+    typec:
+      name: USB Type-C
+    usb4:
+      name: USB4
 display:
   name: Display
   intop: True
@@ -151,7 +161,7 @@ display:
     dsi:
       name: DSI
       intop: True
-    hdmivideo:
+    hdmi:
       name: HDMI
       intop: True
     hdmiaudio:
@@ -182,6 +192,8 @@ camera:
       name: VFE Lite
     sfe:
       name: SFE
+    eva:
+      name: EVA
 video:
   name: Video
   intop: True
@@ -192,10 +204,6 @@ video:
 watchdog:
   name: Watchdog
   intop: True
-apcs:
-  name: APCS IPC
-coresight:
-  name: Coresight Trace
 crypto:
   name: Crypto
   items:
@@ -203,10 +211,6 @@ crypto:
       name: QCrypto
     rng:
       name: RNG
-dcc:
-  name: DCC
-ddrfreq:
-  name: DDRfreq
 dma:
   name: DMA
   items:
@@ -214,45 +218,12 @@ dma:
       name: GPI
     bam:
       name: BAM
-ethernet:
-  name: Ethernet
-  items:
-    emac:
-      name: EMAC
-    gmac:
-      name: GMAC
-eva:
-  name: EVA
 hwspinlocks:
   name: HW Spinlocks
-iommu:
-  name: IOMMU
-ipa:
-  name: IPA
-imem:
-  name: IMEM
-keypad:
-  name: Keypad
-llcc:
-  name: LLCC Scaling
-msmbus:
-  name: MSMBUS
 msgbox:
   name: MsgBox
-nvmem:
-  name: NVMEM
-  items:
-    qfprom:
-      name: QFPROM
-    pmicsdram:
-      name: PMIC SDRAM
-pmu:
-  name: PMU
-  items:
-    armpmu:
-      name: Arm PMU
-    bwmon:
-      name: bwmon(s)
+qfprom:
+  name: QFPROM
 powerthermal:
   name: Power/Thermal
   items:
@@ -266,57 +237,21 @@ powerthermal:
       name: SPM
     tsens:
       name: tsens
-qfprom:
-  name: QFPROM
-rt:
-  name: PREEMPT_RT
-rng:
-  name: RNG
-rsb:
-  name: RSB
-security:
-  name: Security
-sid:
-  name: SID
-spmi:
-  name: SPMI
-  intop: True
+    lmh:
+      name: LMH
 sram:
   name: SRAM
   items:
-    sram:
-      name: SRAM
-    ufsice:
-      name: UFS ICE
-    sdio:
-      name: SDIO
-timer:
-  name: Timer
+    rpmh-stats:
+      name: RPM(h) stats
+    imem:
+      name: IMEM
+debug:
+  name: Debug
   items:
-    archtimer:
-      name: Arch Timer
-    hstimer:
-      name: HSTIMER
-    timer:
-      name: TIMER
-usb:
-  name: USB
-  items:
-    usbotg:
-      name: USB OTG
-    usb4:
-      name: USB4
-    hostmode:
-      name: Host Mode
-    periphmode:
-      name: Peripheral Mode
-typec:
-  name: USB Type-C
-  items:
-    pd:
-      name: PD
-    orientation:
-      name: Orientation
-    roleswitching:
-      name: Role Switching
-
+    coresight:
+      name: Coresight
+    dcc:
+      name: DCC
+    eud:
+      name: EUD
