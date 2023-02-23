@@ -7,7 +7,7 @@ clock:
     gcc:
       name: GCC
       intop: True
-    rmphcc:
+    rpmhcc:
       name: RPM(h)CC
       intop: True
     tcsrcc:
