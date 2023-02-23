@@ -19,6 +19,7 @@ layout: home
 {% include index_soc_status.liquid %}
 </tr>
 {% endfor %}
+{% include index_soc_header.liquid %}
 </tbody>
 </table>
 </div>
