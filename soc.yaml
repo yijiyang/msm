@@ -280,6 +280,7 @@ sid:
   name: SID
 spmi:
   name: SPMI
+  intop: True
 sram:
   name: SRAM
   items:
