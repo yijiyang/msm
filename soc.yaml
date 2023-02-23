@@ -1,23 +1,420 @@
 # Don't forget to execute ./regen.py after changing this file.
 
+clock:
+  name: Clocks
+  intop: True
+  items:
+    gcc:
+      name: GCC
+      intop: True
+    rmphcc:
+      name: RPM(h)CC
+      intop: True
+    tcsrcc:
+      name: TCSRCC
+      intop: False
+pinctrl:
+  name: Pinctrl
+  intop: True
+interconnects:
+  name: Interconnects
+  intop: True
 uart:
-  name: UART
-gcc:
-  name: GCC
-icc:
-  name: Interconnect
-gpu:
-  name: GPU
-gps:
-  name: GPS
+  name: UART (USUART)
+  intop: True
+i2c:
+  name: I2C DMA
+  intop: True
+spi:
+  name: SPI
+  intop: True
+  items:
+    spise:
+      name: SPI (Serial Engine)
+      intop: True
+    qspi:
+      name: QSPI
+      intop: True
+pcie:
+  name: PCIe
+  intop: True
+smmu:
+  name: SMMU
+  intop: True
+storage:
+  name: Storage
+  intop: True
+  items:
+    nand:
+      name: NAND
+      intop: True
+    sata:
+      name: SATA
+      intop: False
+    ufs:
+      name: UFS ICE
+      intop: True
+emmc:
+  name: Storage - SD/eMMC
+  intop: True
+  items:
+    emmcice:
+      name: eMMC ICE
+      intop: True
+    hs400:
+      name: HS400 enhanced strobe
+      intop: True
+    cqe:
+      name: CQE
+      intop: True
+    usd:
+      name: uSD
+      intop: True
+    sdio:
+      name: SDIO
+      intop: True
+cpu:
+  name: CPU
+  intop: True
+  items:
+    cpufreq:
+      name: CPUfreq (DVFS)
+      intop: True
+    cpuidle:
+      name: CPUidle
+      intop: True
+    cachetop:
+      name: Cache Topology
+      intop: False
+    l3cache:
+      name: L3 Cache Controller
+      intop: False
+    smp:
+      name: SMP
+      intop: True
+remoteproc:
+  name: Remoteproc
+  intop: True
+  items:
+    adsp:
+      name: ADSP
+      intop: True
+    cdsp:
+      name: CDSP
+      intop: True
+    sdsp:
+      name: SDSP/SLIP
+      intop: True
+    mdsp:
+      name: MDSP
+      intop: True
+    fastrpc:
+      name: FastRPC/compute
+      intop: True
+bluetooth:
+  name: Bluetooth
+  intop: True
+  items:
+    smd:
+      name: SMD
+      intop: True
+    uart:
+      name: UART
+      intop: True
+wlan:
+  name: WLAN
+  intop: True
+  items:
+    onoff:
+      name: On/Off
+      intop: True
+    browsing:
+      name: Browsing
+      intop: True
+gnss:
+  name: GNSS (GPS)
+  intop: True
+audio:
+  name: Audio
+  intop: True
+  items:
+    headset:
+      name: Headset Buttons
+      intop: True
+    analogcodec:
+      name: Analog Codec
+      intop: True
+    lpascodecs:
+      name: LPASS Digital Codecs
+      intop: False
+    dmic:
+      name: DMIC
+      intop: True
+    i2s:
+      name: I2S 
+      intop: False
+    spdif:
+      name: SPDIF
+      intop: False
+    soundwire:
+      name: Soundwire
+      intop: True
+    slimbus:
+      name: SlimBus
+      intop: False
+    lpasslpi:
+      name: LPASS LPI pinctrl
+      intop: False
+    adspelite:
+      name: ADSP (Elite)
+      intop: False
+    adspaudio:
+      name: ADSP (AudioReach)
+      intop: True
 display:
   name: Display
+  intop: True
   items:
-    dpu:
-      name: MDP/DPU
+    hdmicec:
+      name: HDMI CEC
+      intop: False
+    hdmivideo:
+      name: HDMI Video
+      intop: True
+    hdmiaudio:
+      name: HDMI Audio
+      intop: False
+    lvds:
+      name: LVDS
+      intop: False
     dsi:
       name: DSI
-    hdmi:
-      name: HDMI
+      intop: True
     dp:
-      name: DP
+      name: DisplayPort
+      intop: True
+    kgsl:
+      name: GPU
+      intop: True
+camera:
+  name: Camera
+  intop: True
+  items:
+    csi:
+      name: CSI
+      intop: True
+    datapath:
+      name: Data Path
+      intop: True
+    i2c:
+      name: I2C CCI
+      intop: True
+    vfe:
+      name: VFE
+      intop: True
+    vfelight:
+      name: VFE Lite
+      intop: True
+    sfe:
+      name: SFE
+      intop: True
+video:
+  name: Video
+  intop: True
+  items:
+    tspp:
+      name: TSPP
+      intop: False
+    venus:
+      name: Venus
+      intop: True
+    videomem:
+      name: Video Memory
+      intop: False
+watchdog:
+  name: Watchdog
+  intop: True
+apcs:
+  name: APCS IPC
+  intop: False
+coresight:
+  name: Coresight Trace
+  intop: False
+crypto:
+  name: Crypto
+  intop: False
+  items:
+    qcrypto:
+      name: QCrypto
+      intop: False
+    rng:
+      name: RNG
+      intop: False
+dcc:
+  name: DCC
+  intop: False
+ddrfreq:
+  name: DDRfreq
+  intop: False
+dma:
+  name: DMA
+  intop: False
+  items:
+    gpi:
+      name: GPI
+      intop: False
+    bam:
+      name: BAM
+      intop: False
+ethernet:
+  name: Ethernet
+  intop: False
+  items:
+    emac:
+      name: EMAC
+      intop: False
+    gmac:
+      name: GMAC
+      intop: False
+eva:
+  name: EVA
+  intop: False
+hwspinlocks:
+  name: HW Spinlocks
+  intop: False
+iommu:
+  name: IOMMU
+  intop: False
+ipa:
+  name: IPA
+  intop: False
+imem:
+  name: IMEM
+  intop: False
+keypad:
+  name: Keypad
+  intop: False
+llcc:
+  name: LLCC Scaling
+  intop: False
+msmbus:
+  name: MSMBUS
+  intop: False
+msgbox:
+  name: MsgBox
+  intop: False
+nvmem:
+  name: NVMEM
+  intop: False
+  items:
+    qfprom:
+      name: QFPROM
+      intop: False
+    pmicsdram:
+      name: PMIC SDRAM
+      intop: False
+pmu:
+  name: PMU
+  intop: False
+  items:
+    armpmu:
+      name: Arm PMU
+      intop: False
+    bwmon:
+      name: bwmon(s)
+      intop: False
+powerthermal:
+  name: Power/Thermal
+  intop: False
+  items:
+    currentlimit:
+      name: current-limit
+      intop: False
+    mpm:
+      name: MPM
+      intop: False
+    pdc:
+      name: PDC
+      intop: False
+    spm:
+      name: SPM
+      intop: False
+    tsens:
+      name: tsens
+      intop: False
+qfprom:
+  name: QFPROM
+  intop: False
+rt:
+  name: PREEMPT_RT
+  intop: False
+rng:
+  name: RNG
+  intop: False
+rsb:
+  name: RSB
+  intop: False
+security:
+  name: Security
+  intop: False
+sid:
+  name: SID
+  intop: False
+spmi:
+  name: SPMI
+  intop: False
+sram:
+  name: SRAM
+  intop: False
+  items:
+    sram:
+      name: SRAM
+      intop: False
+    ufsice:
+      name: UFS ICE
+      intop: False
+    sdio:
+      name: SDIO
+      intop: False
+timer:
+  name: Timer
+  intop: False
+  items:
+    archtimer:
+      name: Arch Timer
+      intop: False
+    hstimer:
+      name: HSTIMER
+      intop: False
+    timer:
+      name: TIMER
+      intop: False
+usb:
+  name: USB
+  intop: False
+  items:
+    usbotg:
+      name: USB OTG
+      intop: False
+    usb4:
+      name: USB4
+      intop: False
+    hostmode:
+      name: Host Mode
+      intop: False
+    periphmode:
+      name: Peripheral Mode
+      intop: False
+typec:
+  name: USB Type-C
+  intop: False
+  items:
+    pd:
+      name: PD
+      intop: False
+    orientation:
+      name: Orientation
+      intop: False
+    roleswitching:
+      name: Role Switching
+      intop: False
