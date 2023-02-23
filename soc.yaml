@@ -19,10 +19,10 @@ interconnects:
   name: Interconnects
   intop: True
 uart:
-  name: UART (USUART)
+  name: UART
   intop: True
 i2c:
-  name: I2C DMA
+  name: I2C
   intop: True
 spi:
   name: SPI
@@ -30,10 +30,8 @@ spi:
   items:
     spise:
       name: SPI (Serial Engine)
-      intop: True
     qspi:
       name: QSPI
-      intop: True
 pcie:
   name: PCIe
   intop: True
@@ -50,27 +48,22 @@ storage:
     sata:
       name: SATA
     ufs:
-      name: UFS ICE
+      name: UFS
       intop: True
-emmc:
-  name: Storage - SD/eMMC
-  intop: True
-  items:
-    emmcice:
-      name: eMMC ICE
+    emmc:
+      name: SD/eMMC
       intop: True
-    hs400:
-      name: HS400 enhanced strobe
-      intop: True
-    cqe:
-      name: CQE
-      intop: True
-    usd:
-      name: uSD
-      intop: True
-    sdio:
-      name: SDIO
-      intop: True
+      items:
+        emmcice:
+          name: eMMC ICE
+        hs400:
+          name: HS400 enhanced strobe
+        cqe:
+          name: CQE
+        usd:
+          name: uSD
+        sdio:
+          name: SDIO
 cpu:
   name: CPU
   intop: True
@@ -94,39 +87,30 @@ remoteproc:
   items:
     adsp:
       name: ADSP
-      intop: True
     cdsp:
       name: CDSP
-      intop: True
     sdsp:
-      name: SDSP/SLIP
-      intop: True
+      name: SDSP/SLPI
     mdsp:
       name: MDSP
-      intop: True
     fastrpc:
       name: FastRPC/compute
-      intop: True
 bluetooth:
   name: Bluetooth
   intop: True
   items:
     smd:
       name: SMD
-      intop: True
     uart:
       name: UART
-      intop: True
 wlan:
   name: WLAN
   intop: True
   items:
     onoff:
       name: On/Off
-      intop: True
     browsing:
       name: Browsing
-      intop: True
 gnss:
   name: GNSS (GPS)
   intop: True
@@ -136,7 +120,6 @@ audio:
   items:
     headset:
       name: Headset Buttons
-      intop: True
     analogcodec:
       name: Analog Codec
       intop: True
@@ -146,7 +129,7 @@ audio:
       name: DMIC
       intop: True
     i2s:
-      name: I2S 
+      name: I2S
     spdif:
       name: SPDIF
     soundwire:
@@ -165,18 +148,18 @@ display:
   name: Display
   intop: True
   items:
-    hdmicec:
-      name: HDMI CEC
-    hdmivideo:
-      name: HDMI Video
-      intop: True
-    hdmiaudio:
-      name: HDMI Audio
-    lvds:
-      name: LVDS
     dsi:
       name: DSI
       intop: True
+    hdmivideo:
+      name: HDMI
+      intop: True
+    hdmiaudio:
+      name: HDMI Audio
+    hdmicec:
+      name: HDMI CEC
+    lvds:
+      name: LVDS
     dp:
       name: DisplayPort
       intop: True
@@ -189,33 +172,23 @@ camera:
   items:
     csi:
       name: CSI
-      intop: True
     datapath:
       name: Data Path
-      intop: True
     i2c:
       name: I2C CCI
-      intop: True
     vfe:
       name: VFE
-      intop: True
     vfelight:
       name: VFE Lite
-      intop: True
     sfe:
       name: SFE
-      intop: True
 video:
   name: Video
   intop: True
   items:
-    tspp:
-      name: TSPP
     venus:
       name: Venus
       intop: True
-    videomem:
-      name: Video Memory
 watchdog:
   name: Watchdog
   intop: True
