@@ -17,6 +17,7 @@ layout: home
 <tr>
 <td><a href="{{d.url | absolute_url}}">{{d.name}}</a></td>
 {% include index_soc_status.liquid %}
+<td><a href="{{d.url | absolute_url}}">{{d.name}}</a></td>
 </tr>
 {% endfor %}
 {% include index_soc_header.liquid %}
@@ -35,6 +36,7 @@ layout: home
 <tr>
 <td><a href="{{d.url | absolute_url}}">{{d.name}}</a></td>
 {% include index_pmic_status.liquid %}
+<td><a href="{{d.url | absolute_url}}">{{d.name}}</a></td>
 </tr>
 {% endfor %}
 </tbody>
