@@ -6,23 +6,21 @@ layout: home
 ---
 <div>
 <h2>SoC status</h2>
-<p>This table contains highlights of the features supported for each SoC.</p>
-<p>Click on the SoC link to see the full list.</p>
+<p>This table contains full set of the features supported for each SoC.</p>
 <table>
 <thead>
-{% include index_soc_header.liquid %}
+{% include full_soc_header.liquid %}
 </thead>
 <tbody>
 {% for d in site.soc %}
 <tr>
 <td><a href="{{d.url | absolute_url}}">{{d.name}}</a></td>
-{% include index_soc_status.liquid %}
-<td><a href="{{d.url | absolute_url}}">{{d.name}}</a></td>
+{% include full_soc_status.liquid %}
 </tr>
 {% endfor %}
 </tbody>
 <tfoot>
-{% include index_soc_header.liquid %}
+{% include full_soc_header.liquid %}
 </tfoot>
 </table>
 </div>
@@ -31,14 +29,13 @@ layout: home
 <h2>PMIC Status</h2>
 <table>
 <thead>
-{% include index_pmic_header.liquid %}
+{% include full_pmic_header.liquid %}
 </thead>
 <tbody>
 {% for d in site.pmic %}
 <tr>
 <td><a href="{{d.url | absolute_url}}">{{d.name}}</a></td>
-{% include index_pmic_status.liquid %}
-<td><a href="{{d.url | absolute_url}}">{{d.name}}</a></td>
+{% include full_pmic_status.liquid %}
 </tr>
 {% endfor %}
 </tbody>
