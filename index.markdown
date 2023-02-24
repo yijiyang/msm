@@ -20,8 +20,10 @@ layout: home
 <td><a href="{{d.url | absolute_url}}">{{d.name}}</a></td>
 </tr>
 {% endfor %}
-{% include index_soc_header.liquid %}
 </tbody>
+<tfoot>
+{% include index_soc_header.liquid %}
+</tfoot>
 </table>
 </div>
 

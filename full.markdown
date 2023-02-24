@@ -18,8 +18,10 @@ layout: home
 {% include full_soc_status.liquid %}
 </tr>
 {% endfor %}
-{% include full_soc_header.liquid %}
 </tbody>
+<tfoot>
+{% include full_soc_header.liquid %}
+</tfoot>
 </table>
 </div>
 
