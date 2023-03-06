@@ -21,6 +21,9 @@ def filter_intop(data):
 def filter_nop(data):
     return data.items()
 
+def filter_dict(data, filter_fn):
+    return {k: v for k, v in data.items() if filter_fn(v)}.items()
+
 def write_header_int(out, data, filter_fn):
     for (k, v) in filter_fn(data):
         out.write('<th>%s</th>\n' % (v['name']))
@@ -81,12 +84,14 @@ def write_status(out, data, prefix, filter_fn):
             write_status_tag(out, '%s-%s' % (prefix, k))
             out.write('\n')
 
-def generate_template(data, prefix, filter_fn):
+def generate_template(data, prefix, check_fn):
     for (k, v) in data.items():
-        if 'items' not in v or (len(filter_fn(v['items'])) == 0):
+        if 'items' not in v:
+            yield '%s-%s' % (prefix, k)
+        if 'items' in v and len(filter_dict(v['items'], check_fn)) == 0 and check_fn(v):
             yield '%s-%s' % (prefix, k)
         if 'items' in v:
-            yield from generate_template(v['items'], prefix + '-' + k, filter_fn)
+            yield from generate_template(v['items'], prefix + '-' + k, check_fn)
 
 def handle_soc_pmic(data, kind, prefix):
     has_nested = False
@@ -129,7 +134,7 @@ def handle_soc_pmic(data, kind, prefix):
             write_layout(out, data, 'page.' + prefix)
 
     with open('_%s.template' % kind, 'w') as out:
-        out.write(':\n'.join(sorted(generate_template(data, prefix, filter_intop))))
+        out.write(':\n'.join(sorted(generate_template(data, prefix, is_intop))))
         out.write(':\n')
 
 with open('soc.yaml', "r") as file:
