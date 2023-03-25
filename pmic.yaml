@@ -1,25 +1,13 @@
 # Don't forget to execute ./regen.py after changing this file.
 
-bms:
-  name: BMS
-  intop: True
-clkdiv:
-  name: clkdiv
-  intop: True
-audiocodec:
-  name: Audio Codec
-  intop: True
-coincell:
-  name: Coincell
-  intop: True
-fuelgague:
-  name: Fuelgague/Charging
-  intop: True
 gpio:
   name: GPIO
   intop: True
-haptics:
-  name: Haptics
+mpp:
+  name: MPP
+  intop: True
+regulators:
+  name: Regulators
   intop: True
 adc:
   name: ADC
@@ -27,49 +15,66 @@ adc:
   items:
     gpadc:
       name: GPADC
-      intop: True
-    lradc:
-      name: LRADC
-      intop: True
+    rradc:
+      name: RRADC
     thermal:
       name: Thermal
       intop: True
     touch:
       name: Touch
-      intop: True
     iadc:
       name: IADC
-      intop: True
     vadc:
       name: VADC
       intop: True
-labib:
-  name: LABIB
-  intop: True
-lpg:
-  name: LPG/PWM
-  intop: True
-mpp:
-  name: MPP
+tempalarm:
+  name: temp-alarm
   intop: True
 pon:
   name: PON
   intop: True
-qnovo:
-  name: QNovo
-  intop: True
-regulators:
-  name: Regulators
+resin:
+  name: Reset key
   intop: True
 rtc:
   name: RTC
   intop: True
-tempalarm:
-  name: temp-alarm
+watchdog:
+  name: Watchdog
+lpg:
+  name: LPG/PWM
   intop: True
 wled:
   name: WLED/flash
   intop: True
-typecpd:
-  name: Type-C/PD
+usb:
+  name: USB
   intop: True
+  items:
+    extcon:
+      name: OTG
+      intop: True
+    typecpd:
+      name: Type-C/PD
+      intop: True
+coincell:
+  name: Coincell
+  intop: True
+fuelgague:
+  name: Fuelgague/Charging
+  intop: True
+haptics:
+  name: Haptics
+  intop: True
+labib:
+  name: LABIB
+  intop: True
+audiocodec:
+  name: Audio Codec
+  intop: True
+qnovo:
+  name: QNovo
+bms:
+  name: BMS
+clkdiv:
+  name: clkdiv
