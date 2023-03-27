@@ -78,3 +78,6 @@ bms:
   name: BMS
 clkdiv:
   name: clkdiv
+eusb2repeat:
+  intop: True
+  name: eUSB2 Repeater
