@@ -44,3 +44,5 @@ layout: home
 </tbody>
 </table>
 </div>
+
+<p>Help us updating the table by forking on <a href="https://github.com/Linaro/msm">GitHub</a>.</p>
