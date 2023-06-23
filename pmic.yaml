@@ -81,3 +81,6 @@ clkdiv:
 eusb2repeat:
   intop: True
   name: eUSB2 Repeater
+keypad:
+  intop: True
+  name: Matrix keypad
