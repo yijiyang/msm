@@ -16,4 +16,8 @@
     {%- else -%}
       status-Y
     {%- endif -%}
-{%- endcase -%}">{{include.status}}</td>
+{%- endcase -%}">{{include.status}}
+{%- if include.comment %}
+	<span class="tooltip">(*)<span class="tooltiptext">{{include.comment}}</span></span>
+{%- endif -%}
+</td>
