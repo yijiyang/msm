@@ -71,6 +71,7 @@ cpu:
       name: L3 Cache Controller
     smp:
       name: SMP
+      intop: true
     llcc:
       name: LLCC Scaling
     ddrfreq:
