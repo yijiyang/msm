@@ -53,7 +53,7 @@ status-gnss: N/A
 status-hwspinlocks: 5.19
 status-i2c: N/A
 status-interconnects: 5.19
-status-pcie: 6.4
+status-pcie: 6.5
 status-pinctrl: 5.17
 status-powerthermal-currentlimit:
 status-powerthermal-lmh:
