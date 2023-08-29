@@ -12,6 +12,7 @@ pmic-bms: N/A
 pmic-clkdiv: N/A
 pmic-coincell: N/A
 pmic-eusb2repeat: N/A
+pmic-flash: N/A
 pmic-fuelgague: N/A
 pmic-gpio: 6.3
 pmic-haptics: N/A
