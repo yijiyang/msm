@@ -45,7 +45,10 @@ lpg:
   name: LPG/PWM
   intop: True
 wled:
-  name: WLED/flash
+  name: WLED (backlight)
+  intop: True
+flash:
+  name: Flash LED
   intop: True
 usb:
   name: USB
