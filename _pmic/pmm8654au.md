@@ -1,0 +1,33 @@
+---
+name: PMM8654AU
+layout: pmic
+pmic-adc-gpadc: N/A
+pmic-adc-iadc: N/A
+pmic-adc-rradc: N/A
+pmic-adc-thermal: N/A
+pmic-adc-touch: N/A
+pmic-adc-vadc: N/A
+pmic-audiocodec: N/A
+pmic-bms: N/A
+pmic-clkdiv: N/A
+pmic-coincell: N/A
+pmic-eusb2repeat: N/A
+pmic-flash: N/A
+pmic-fuelgague: N/A
+pmic-gpio: 6.4
+pmic-haptics: N/A
+pmic-keypad: N/A
+pmic-labib: N/A
+pmic-lpg: N/A
+pmic-mpp: N/A
+pmic-pon: 6.4
+pmic-qnovo: N/A
+pmic-regulators: 6.4
+pmic-resin: 6.4
+pmic-rtc: N/A
+pmic-tempalarm: 6.4
+pmic-usb-extcon: N/A
+pmic-usb-typecpd: N/A
+pmic-watchdog: N/A
+pmic-wled: N/A
+---
