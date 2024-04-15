@@ -24,7 +24,7 @@ pmic-pon: 6.4
 pmic-qnovo: N/A
 pmic-regulators: 6.4
 pmic-resin: 6.4
-pmic-rtc: N/A
+pmic-rtc: 6.3
 pmic-tempalarm: 6.4
 pmic-usb-extcon: N/A
 pmic-usb-typecpd: N/A
